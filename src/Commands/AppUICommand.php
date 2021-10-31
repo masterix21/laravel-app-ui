@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Masterix21\AppUI\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class AppUICommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'appui';
 
     public $description = 'My command';
 
