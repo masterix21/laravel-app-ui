@@ -4,7 +4,7 @@ namespace Masterix21\AppUI\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Masterix21\AppUI\AppUIServiceProvider;
+use Masterix21\AppUI\ServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            AppUIServiceProvider::class,
+            ServiceProvider::class,
         ];
     }
 

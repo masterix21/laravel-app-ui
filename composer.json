@@ -1,12 +1,12 @@
 {
-    "name": "masterix21/appui",
+    "name": "masterix21/laravel-app-ui",
     "description": "Laravel APP UI components",
     "keywords": [
         "masterix21",
         "laravel",
-        "appui"
+        "app-ui"
     ],
-    "homepage": "https://github.com/masterix21/appui",
+    "homepage": "https://github.com/masterix21/laravel-app-ui",
     "license": "MIT",
     "authors": [
         {
@@ -30,8 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Masterix21\\AppUI\\": "src",
-            "Masterix21\\AppUI\\Database\\Factories\\": "database/factories"
+            "Masterix21\\AppUI\\": "src"
         }
     },
     "autoload-dev": {
@@ -49,11 +48,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Masterix21\\AppUI\\AppUIServiceProvider"
-            ],
-            "aliases": {
-                "AppUI": "Masterix21\\AppUI\\AppUIFacade"
-            }
+                "Masterix21\\AppUI\\ServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
