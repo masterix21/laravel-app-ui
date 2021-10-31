@@ -2,9 +2,9 @@
 
 namespace Masterix21\AppUI;
 
+use Masterix21\AppUI\Commands\AppUICommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Masterix21\AppUI\Commands\AppUICommand;
 
 class AppUIServiceProvider extends PackageServiceProvider
 {
