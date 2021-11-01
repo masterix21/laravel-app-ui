@@ -30,14 +30,11 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require masterix21/appui
+composer require masterix21/laravel-app-ui
 ```
 
-You can publish and run the migrations with:
-
 ```bash
-php artisan vendor:publish --provider="Masterix21\AppUI\AppUIServiceProvider" --tag="appui-migrations"
-php artisan migrate
+npm require tailwindcss // todo
 ```
 
 You can publish the config file with:
@@ -45,18 +42,24 @@ You can publish the config file with:
 php artisan vendor:publish --provider="Masterix21\AppUI\AppUIServiceProvider" --tag="appui-config"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
-```php
-$appui = new Masterix21\AppUI();
-echo $appui->echoPhrase('Hello, Masterix21!');
+Full size content layout
+```blade
+<x-app-ui::layout>
+    <div>Content</div>
+</x-app-ui::layout>
+```
+
+Layout with aside panel
+```blade
+<x-app-ui::layout>
+    <div>Content</div>
+    
+    <x-slot name="aside">
+        <div>Aside Content</div>
+    </x-slot>
+</x-app-ui::layout>
 ```
 
 ## Testing
