@@ -19,18 +19,14 @@
             <div class="max-w-3xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-12 lg:gap-8">
                 <x-app-ui::sidebar />
 
-                @if ($aside ?? null)
-                    <main class="lg:col-span-9 xl:col-span-6">
-                        {{ $slot ?? '' }}
-                    </main>
+                <main @class(["lg:col-span-9" => true, "xl:col-span-6" => $aside ?? false])>
+                    {{ $slot ?? '' }}
+                </main>
 
+                @if ($aside ?? null)
                     <aside class="hidden xl:block xl:col-span-4">
                         {{ $aside }}
                     </aside>
-                @else
-                    <main>
-                        {{ $slot ?? '' }}
-                    </main>
                 @endif
             </div>
         </div>
