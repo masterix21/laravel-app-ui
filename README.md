@@ -80,17 +80,6 @@ Full size content layout
 </x-app-ui::layout>
 ```
 
-Layout with aside panel
-```blade
-<x-app-ui::layout>
-    <div>Content</div>
-    
-    <x-slot name="aside">
-        <div>Aside Content</div>
-    </x-slot>
-</x-app-ui::layout>
-```
-
 ## Testing
 
 ```bash
