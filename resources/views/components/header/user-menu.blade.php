@@ -12,7 +12,7 @@
         </button>
     </div>
 
-    <div class="origin-top-right absolute z-10 right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none"
+    <div class="user-menu"
          x-show="open"
          role="menu"
          aria-orientation="vertical"
@@ -26,11 +26,8 @@
          x-transition:leave="transition ease-in duration-75"
          x-transition:leave-start="transform opacity-100 scale-100"
          x-transition:leave-end="transform opacity-0 scale-95">
-        <!-- Active: "bg-gray-100", Not Active: "" -->
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Your Profile</a>
-
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Settings</a>
-
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">Sign out</a>
+        @foreach (config('app-ui.user-menu') as $item)
+            <x-app-ui::common.menu-link :item="$item" />
+        @endforeach
     </div>
 </div>

@@ -40,4 +40,21 @@ return [
             ],
         ],
     ],
+
+    'user-menu' => [
+        [
+            'label' => 'Il tuo profilo',
+            'icon' => null,
+            'route' => null,
+        ], [
+            'label' => 'Impostazioni',
+            'icon' => null,
+            'route' => null,
+        ], [
+            'type' => 'submit',
+            'label' => 'Esci',
+            'icon' => null,
+            'route' => 'logout',
+        ]
+    ],
 ];
