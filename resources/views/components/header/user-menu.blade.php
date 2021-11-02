@@ -2,6 +2,7 @@
      @open-header-user-menu.window="open = true"
      @close-header-user-menu.window="open = false"
      @toggle-header-user-menu.window="open = ! open"
+     x-on:click.away="open = false"
      class="flex-shrink-0 relative ml-5">
     <div>
         <button type="button"
