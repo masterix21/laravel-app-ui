@@ -1,10 +1,11 @@
 @props(['item' => []])
-<div class="menu-link">
+<div>
     @if (! \Illuminate\Support\Arr::has($item, 'children'))
         <a href="{{ $item['route'] ? route($item['route']) : "#" }}"
             @class([
-                 "menu-link-inactive" => $item['route'] && request()->route()->named($item['route']),
-                 "menu-link-active" => ! $item['route'] || ! request()->route()->named($item['route'])
+                 "menu-link" => true,
+                 "menu-link-active" => $item['route'] && request()->route()->named($item['route']),
+                 "menu-link-inactive" => ! $item['route'] || ! request()->route()->named($item['route'])
             ])>
             {!! $item['icon'] !!}
             <span class="truncate">

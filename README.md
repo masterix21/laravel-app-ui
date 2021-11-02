@@ -34,7 +34,36 @@ composer require masterix21/laravel-app-ui
 ```
 
 ```bash
-npm require tailwindcss // todo
+npm require tailwindcss
+```
+
+Update your tailwind.js with these lines:
+```js
+module.exports = {
+    // ...
+    
+    variants: {
+        extend: {
+            padding: ['first', 'last'],
+        }
+    },
+
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio'),
+    ],
+
+    // ...
+}
+```
+
+And instruct your app.css to include our css like so:
+```css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "../../vendor/masterix21/laravel-app-ui/resources/css/app-ui.css";
 ```
 
 You can publish the config file with:
