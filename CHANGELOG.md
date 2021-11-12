@@ -7,3 +7,4 @@ All notable changes to `AppUI` will be documented in this file.
 - Layout components
 - Table components
 - Card panel
+- Tab components
