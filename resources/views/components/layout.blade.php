@@ -20,7 +20,7 @@
                 <x-app-ui::sidebar />
 
                 <main class="lg:col-span-9 xl:col-span-10">
-                    {{ $slot ?? '' }}
+                    {{ $slot }}
                 </main>
             </div>
         </div>
