@@ -8,7 +8,7 @@
 
 
 .sidebar .menu-link {
-    @apply w-full group flex items-center px-3 py-2 text-sm font-medium rounded-md;
+    @apply w-full flex items-center px-3 py-2 text-sm font-medium rounded-md;
 }
 
 .sidebar .menu-link.menu-link-inactive {
