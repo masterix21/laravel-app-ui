@@ -9,7 +9,7 @@
                 @click="$dispatch('toggle-header-user-menu')"
                 class="bg-white rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">
             <span class="sr-only">Open user menu</span>
-            <img class="h-8 w-8 rounded-full" src="{{ app('gravatar')->src(auth()->user()->email) }}" alt="">
+            <img class="h-8 w-8 rounded-full" src="{{ Gravatar::get(auth()->user()->email) }}" alt="">
         </button>
     </div>
 

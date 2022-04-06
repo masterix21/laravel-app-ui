@@ -46,7 +46,7 @@
         <div class="border-t border-gray-200 pt-4">
             <div class="max-w-3xl mx-auto px-4 flex items-center sm:px-6">
                 <div class="flex-shrink-0">
-                    <img class="h-10 w-10 rounded-full" src="{{ app('gravatar')->src(auth()->user()->email) }}" alt="" />
+                    <img class="h-10 w-10 rounded-full" src="{{ Gravatar::get(auth()->user()->email) }}" alt="" />
                 </div>
                 <div class="ml-3">
                     <div class="text-base font-medium text-gray-800">{{ auth()->user()->name }}</div>
